@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Contador com cores</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <div class="main">
+    <h1>Contador</h1>
+    <p id="counter">0</p>
+    <div>
+      <button onclick="decrease()" class="negativo">-</button>
+      <button onclick="increase()" class="positivo">+</button>
+    </div>
+  </div>
+  <script>
+    let counter = 0;
+    const counterElement = document.getElementById('counter');
+
+    function updateCounter(value) {
+      counter += value;
+      counterElement.textContent = counter;
+
+      if (counter > 0) {
+        counterElement.classList.remove('negative');
+        counterElement.classList.add('positive');
+      } else if (counter < 0) {
+        counterElement.classList.remove('positive');
+        counterElement.classList.add('negative');
+      } else {
+        counterElement.classList.remove('positive', 'negative');
+      }
+    }
+
+    function decrease() {
+      updateCounter(-1); // Reduz o contador em 1
+    }
+
+    function increase() {
+      updateCounter(1); // Aumenta o contador em 1
+    }
+
+  </script>
+</body>
+
+</html>

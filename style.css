@@ -1,0 +1,43 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 300px;
+}
+
+button {
+    width: 80px;
+    margin-top: 10px;
+    margin-right: 10px;
+    height: 30px;
+    border-radius: 10px;
+    border: 1px solid;
+    cursor: pointer;
+}
+
+.negativo {
+    background-color: red;
+}
+
+.positivo {
+    background-color: green;
+}
+
+p {
+    font-size: 70px;
+}
+
+.negative {
+    color: red;
+}
+
+.positive {
+    color: green;
+}
